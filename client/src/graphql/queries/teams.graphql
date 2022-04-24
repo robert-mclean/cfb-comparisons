@@ -1,0 +1,9 @@
+query Teams($args: TeamsArguments) {
+  teams(args: $args) {
+    id
+    name
+    conference
+    primaryColor
+    secondaryColor
+  }
+}

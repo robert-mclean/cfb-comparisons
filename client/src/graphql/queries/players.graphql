@@ -1,0 +1,19 @@
+query Players($args: PlayersArguments!) {
+  players(args: $args) {
+    id
+    name
+    jersey
+    position
+    height
+    weight
+    year
+    rating
+    team {
+      id
+      name
+      conference
+      primaryColor
+      secondaryColor
+    }
+  }
+}
