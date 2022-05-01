@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Spinner, Table } from "react-bootstrap";
+import { Alert, Container, Spinner, Table } from "react-bootstrap";
 import { Player, Team, usePlayersQuery } from "../generated/graphql";
 
 interface PlayerTableProps {
@@ -14,13 +14,20 @@ export const PlayerTable: React.FC<PlayerTableProps> = ({ teams }) => {
     data: playersData,
   } = usePlayersQuery({ variables: { args: { teamIds } } });
 
-  console.log({ playersLoading, playersError, playersData });
-
   if (playersLoading) {
     return (
       <Spinner animation="border" role="status">
         <span className="visually-hidden">Loading...</span>
       </Spinner>
+    );
+  }
+
+  if (playersError) {
+    console.log(playersError);
+    return (
+      <Alert className="m-1" variant="danger">
+        Server error encountered. Please wait a few minutes and try again
+      </Alert>
     );
   }
 
