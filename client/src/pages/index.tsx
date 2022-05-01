@@ -1,6 +1,14 @@
 import type { NextPage } from "next";
 import { useState } from "react";
-import { Alert, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
+import {
+  Alert,
+  Col,
+  Container,
+  Nav,
+  Navbar,
+  Row,
+  Spinner,
+} from "react-bootstrap";
 import { Github } from "react-bootstrap-icons";
 import { PlayerTable } from "../components/PlayerTable";
 import { TeamSelection } from "../components/TeamSelection";
@@ -37,12 +45,19 @@ const Home: NextPage = () => {
           </Nav>
         </Container>
       </Navbar>
+
       {teamsError ? (
         <>
           <Alert className="m-5" variant="danger">
             Server error encountered. Please wait a few minutes and try again
           </Alert>
         </>
+      ) : teamsLoading ? (
+        <Col className="d-flex align-items-center justify-content-center">
+          <Spinner className="m-5" animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+        </Col>
       ) : (
         <Container className="mt-3">
           <Row>

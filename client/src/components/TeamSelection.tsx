@@ -14,7 +14,7 @@ export const TeamSelection: React.FC<TeamSelectionProps> = ({
   teams,
 }) => {
   if (!teams) {
-    return <Container>Loading...</Container>;
+    return <></>;
   }
 
   const teamsByConference = new Map<string, Team[]>();
