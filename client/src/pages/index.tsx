@@ -39,7 +39,11 @@ const Home: NextPage = () => {
         <Container>
           <Navbar.Brand>CFB Roster Comparisons</Navbar.Brand>
           <Nav>
-            <Nav.Link href="https://github.com/robert-mclean/cfb-comparisons">
+            <Nav.Link
+              href="https://github.com/robert-mclean/cfb-comparisons"
+              target="_blank"
+              rel="noreferrer"
+            >
               GitHub <Github />
             </Nav.Link>
           </Nav>
@@ -77,6 +81,26 @@ const Home: NextPage = () => {
           </Row>
         </Container>
       )}
+      <Navbar className="mt-5 mp-5">
+        <Container>
+          <Nav>
+            <Nav.Link
+              href="https://github.com/robert-mclean"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Site by Robert McLean.
+            </Nav.Link>
+            <Nav.Link
+              href="https://icons8.com/icon/a8PyBWawy3IK/football"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Icon from icons8.
+            </Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
     </>
   );
 };
