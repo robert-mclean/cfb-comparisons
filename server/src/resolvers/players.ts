@@ -1,4 +1,3 @@
-// import { Team } from "../entities/Team";
 import { Resolver, Query, Ctx, Arg, InputType, Field } from "type-graphql";
 import { Player } from "../entities/Player";
 import { Context } from "../types";

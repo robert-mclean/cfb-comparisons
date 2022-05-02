@@ -6,7 +6,7 @@ This repository contains both the client and API for loading team and roster dat
 
 ## Client
 
-Next.js app with Apollo Client, GraphQL Code Generator and React-Bootstrap.
+Next.js app with Apollo Client, GraphQL Code Generator, and React-Bootstrap.
 
 Deployed in production with Vercel.
 
